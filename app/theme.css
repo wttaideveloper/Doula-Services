@@ -1,4 +1,6 @@
 /* Bloom: a coordinated boutique maternity theme. */
+.hero-slider .hero-slide,.about-image>img,.package-photo,.story-grid img,.story-grid img:hover{filter:none}
+.package-photo{object-position:center 38%}
 .hero-slide-viewport{position:absolute;inset:0;overflow:hidden;border-radius:inherit;background:#e4d9eb}
 .hero-slide{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:0;transition:opacity .65s ease,transform 1s ease;transform:scale(1.035);filter:sepia(.1) saturate(.8)}
 .hero-slide.is-active{opacity:1;transform:scale(1)}
@@ -50,3 +52,7 @@ footer{padding-top:36px}.footer-bottom{border-color:#e4dce7}.footer-flower{color
 @media(min-width:1500px){.hero{padding-left:max(6%,calc((100vw - 1280px)/2));padding-right:max(6%,calc((100vw - 1280px)/2))}}
 @media(max-width:1000px){.hero{gap:5%;padding-left:5%;padding-right:5%}.hero h1{font-size:50px}.hero-image{height:470px}.package{padding:24px}.package h3{font-size:24px}.nav{gap:18px}.cta h2{font-size:30px}}
 @media(max-width:700px){header{height:85px}.nav.open{background:#fcfaf7}.hero{margin:10px 12px 0;padding:28px 22px 45px;border-radius:22px;gap:34px}.hero h1{font-size:clamp(38px,10vw,54px);letter-spacing:-2px}.hero-copy>.eyebrow{font-size:8px;padding:7px 11px;letter-spacing:1.1px}.hero-image{height:390px;margin-left:10px;margin-right:0;border-radius:150px 150px 85px 18px}.image-note{left:-17px;padding:14px 17px}.image-note span{font-size:20px}.hero-index{font-size:6px;bottom:15px}.values{margin:0 12px;padding:25px 16px;gap:22px 12px}.values span{font-size:10px}.values svg{width:19px;height:19px}.section{padding-top:55px;padding-bottom:55px}.philosophy h2,.about-preview h2{font-size:32px}.services{margin:0 12px;border-radius:22px;padding-left:20px;padding-right:20px}.package{padding:26px;border-radius:18px}.package>p:not(.overline){min-height:0}.package h3{font-size:28px}.section-heading>p{max-width:100%}.testimonials{margin:0 12px;padding:45px 24px;border-radius:22px}.testimonials h2{font-size:30px}.cta{margin:14px 12px;border-radius:22px;padding:35px 25px}.cta h2{font-size:30px}.page-intro{margin:10px 12px 0;border-radius:22px;padding:42px 22px}.page-intro h1{font-size:42px}.about-image>img{border-radius:20px 110px 20px 20px}.contact-grid{padding-left:6%;padding-right:6%}form{padding:24px}.button{min-height:50px}.page-intro+.services{margin-top:14px}}
+
+/* Preserve the luminous color of the generated collection. */
+.package-photo,.story-grid img,.story-grid img:hover,.about-image>img,.hero-slider .hero-slide{filter:none}
+

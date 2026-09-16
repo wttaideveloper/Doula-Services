@@ -1,0 +1,36 @@
+/* Readable type scale across the boutique theme. */
+body{font-size:16px;line-height:1.75}
+p{line-height:1.8}
+.nav{font-size:14px;gap:23px}
+.nav-contact{font-size:14px}
+.button,.text-link{font-size:14px}
+.eyebrow,.overline{font-size:11px;letter-spacing:1.5px;line-height:1.7}
+.hero-copy>.eyebrow{font-size:11px;letter-spacing:1.4px}
+.hero-copy>p{font-size:17px;line-height:1.8}
+.location{font-size:10px;letter-spacing:1px}
+.hero-index{font-size:10px;letter-spacing:1px}
+.values span{font-size:13px}
+.philosophy>p:not(.overline),.about-preview p,.section-heading>p,.page-intro>p,.research p,.process p,.verse p{font-size:16px}
+.section-heading>p{max-width:310px}
+.package h3{font-size:29px}
+.package .overline{font-size:10px;letter-spacing:1.2px}
+.package>p:not(.overline){font-size:15px;line-height:1.8;min-height:108px}
+.package>a,.package ul{font-size:14px}
+.package li{line-height:1.65}
+.faq-item button{font-size:16px;line-height:1.5}
+.faq-item p{font-size:15px}
+.cta p{font-size:15px}
+.cta .overline,.testimonials>.overline{font-size:11px}
+.testimonials .muted,.photo-caption,.about-preview .photo-caption{font-size:12px;line-height:1.65}
+.content-note{font-size:12px!important;line-height:1.7}
+.story-grid figcaption span{font-size:11px;letter-spacing:1.3px}
+.contact-detail{font-size:15px}
+label{font-size:14px}
+input,select,textarea{font-size:16px;line-height:1.5;padding:13px}
+.form-note{font-size:12px}
+.form-success{font-size:14px}
+.footer-top>p{font-size:14px}
+.footer-bottom{font-size:12px;line-height:1.65;gap:16px}
+.hero-slider-controls>span{font-size:12px}
+@media(min-width:701px) and (max-width:1100px){.nav{gap:14px;font-size:12px}.nav-contact{font-size:12px;padding:11px 16px}.brand img{width:220px!important}.package h3{font-size:25px}.package>p:not(.overline){min-height:135px}.cta{flex-wrap:wrap}}
+@media(max-width:700px){body{font-size:16px}.nav.open,.nav-contact{font-size:16px}.hero-copy>.eyebrow{font-size:10px;letter-spacing:1px}.hero-copy>p{font-size:16px}.hero h1{font-size:clamp(38px,10vw,54px)}h2,.philosophy h2,.about-preview h2{font-size:32px;line-height:1.2}.hero-index{font-size:8px}.location{font-size:9px;letter-spacing:.6px}.values span{font-size:12px;line-height:1.5}.values{gap:18px 12px}.values svg{flex-shrink:0}.section-heading>p,.page-intro>p,.contact-grid>div>p{font-size:16px}.package h3{font-size:28px}.package>p:not(.overline){font-size:15px;min-height:0}.package>a{font-size:14px}.faq-item button{font-size:16px}.faq-item p{padding-right:0}.cta h2{font-size:31px}.cta p{font-size:15px}.footer-bottom{font-size:11px}.story-grid figcaption{font-size:28px}}

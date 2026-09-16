@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, Flower2, Pause, Play } from 'lucide-react';
 
 const slides = [
-  { src: '/reference/photo-6.jpg', alt: 'A mother holding her newborn after a supported water birth', label: 'A supported beginning' },
-  { src: '/newborn.jpg', alt: 'A newborn sleeping peacefully on a soft white blanket', label: 'Your little one, finally here' },
+  { src: '/generated/family-beginning-natural.png', alt: 'Parents in denim and terracotta clothing smiling as they cradle their newborn', label: 'Your family’s new beginning' },
+  { src: '/generated/newborn.png', alt: 'A newborn sleeping peacefully on a soft white blanket', label: 'Your little one, finally here' },
 ];
 
 export default function HeroSlider() {
