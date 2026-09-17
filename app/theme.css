@@ -56,3 +56,51 @@ footer{padding-top:36px}.footer-bottom{border-color:#e4dce7}.footer-flower{color
 /* Preserve the luminous color of the generated collection. */
 .package-photo,.story-grid img,.story-grid img:hover,.about-image>img,.hero-slider .hero-slide{filter:none}
 
+/* Earthy lavender and the logo's botanical sage. */
+body{--paper:#f8f7f2;--ink:#383d36;--muted:#666b62;--olive:#637257;--orange:#746878;--line:#d9dcd1;--lavender:#746878;--lavender-soft:#e3dfe3;--sage:#849176;--sage-soft:#e3e8dc}
+header,.has-scrolled header{background:#f8f7f2f2;border-color:var(--line)}
+.has-scrolled header{box-shadow:0 8px 30px #383d360a}
+.nav.open{background:var(--paper)}
+.hero,.page-intro{background:linear-gradient(115deg,#e8e4e7 0%,#e2dfe2 58%,#e1e6db 100%)}
+.hero h1,.page-intro h1{color:var(--ink)}
+.hero h1 em{color:var(--lavender)}
+.hero-copy>.eyebrow{background:#f8f7f280;border-color:#beb5c0;color:#5d5462}
+.eyebrow>span{background:var(--sage)}
+.hero-copy>p,.location{color:#62675e}
+.hero-index{color:#68636b}
+.hero-image:before{border-color:var(--sage)}
+.image-note,.hero-slider-controls{background:#f8f7f0f2;border-color:#eeeee4;box-shadow:0 12px 30px #38433112}
+.image-note svg,.image-note em{color:var(--olive)}
+.hero-slider-controls button,.hero-slider-controls>span{color:#61546a}
+.hero-slider-controls button:hover{background:var(--lavender-soft)}
+.button,.nav-contact{background:var(--lavender);border-color:var(--lavender);color:#fff;box-shadow:0 7px 20px #574c5b14}
+.button:hover,.nav-contact:hover{background:#5d5262;border-color:#5d5262;box-shadow:0 12px 25px #574c5b20}
+.values{background:var(--sage-soft);border-color:#cdd5c4;border-radius:0 0 20px 20px}
+.values span,.values svg{color:#526246}.values i{background:#9ca98e}
+.philosophy .overline,.testimonials .overline{color:#637257}
+.philosophy .text-link,.research .text-link{color:#5b664f}
+.services,.process{background:#e6e9e0}
+.package{background:#faf9f5;border-color:#d7dccc;box-shadow:0 6px 20px #38433105}
+.package.featured{background:#d9e0d0;border-color:#c6d0ba}
+.package-top>svg{background:#e8e2e9;color:#726277}
+.package.featured .package-top>svg{background:#edf0e8;color:#59694c}
+.package-top span{color:#69775f}.package .overline{color:#647158}
+.package>a{color:#66576e;border-color:#d7dccc}.package ul{color:var(--muted)}
+.package:hover{border-color:#a3af98!important;box-shadow:0 18px 35px #52624612!important}
+.little-stamp{background:#dfe6d5;color:#59694c}
+.testimonials{background:var(--lavender-soft);color:#746878}
+.testimonials h2{color:#5f5367}
+.dots button::after{background:#bab2bf}.dots button.active::after{background:#746878}
+.cta{background:linear-gradient(115deg,#526248,#657459)}
+.cta h2{color:#faf9f3}.cta p{color:#ecefe5}
+.cta .button.light,.button.light{background:#f5f2eb;border-color:#f5f2eb;color:#4f5f44}
+.cta .button.light:hover,.button.light:hover{background:#e2e7d9;border-color:#e2e7d9}
+.footer-bottom,.faq-item{border-color:var(--line)}.footer-flower{color:var(--sage)}
+.verse{background:#e6e2e7;border-color:#d4ccd8}
+.step{color:#5c6d4e;background:#f8f7f2;border-color:#bac5ad}
+.faq-item button:hover{color:#637257}.contact-detail{color:#637257}
+form{background:#e8e5e8;border-color:#d7d1db}
+input,select,textarea{background:#faf9f5;border-color:#cccfc3}
+input:focus,select:focus,textarea:focus{outline-color:#849176;box-shadow:0 0 0 3px #84917620}
+.form-success{background:#dce5d3}.content-note{border-color:#a9b49b}
+
