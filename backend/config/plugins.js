@@ -1,0 +1,1 @@
+module.exports = ({ env }) => ({'users-permissions':{config:{jwtSecret:env('JWT_SECRET'),jwt:{expiresIn:'8h'}}},upload:{config:{sizeLimit:8*1024*1024,breakpoints:{large:1200,medium:800,small:400}}}});

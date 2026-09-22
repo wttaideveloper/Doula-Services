@@ -1,3 +1,15 @@
 node_modules
 .next
 *.tsbuildinfo
+.env*
+!.env.example
+backend/.tmp
+backend/.cache
+backend/build
+backend/dist
+backend/public/uploads/*
+!backend/public/uploads/.gitkeep
+backend/.strapi
+.local-admin.txt
+test-results
+backend/.strapi-updater.json

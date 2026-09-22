@@ -1,1 +1,28 @@
-{"name":"compassion-doula","version":"1.0.0","private":true,"scripts":{"dev":"next dev --hostname 0.0.0.0","build":"next build","start":"next start --hostname 0.0.0.0","typecheck":"tsc --noEmit"},"dependencies":{"lucide-react":"^0.468.0","next":"^16.3.5","react":"^19.1.0","react-dom":"^19.1.0"},"devDependencies":{"@types/node":"^22.10.0","@types/react":"^19.0.0","@types/react-dom":"^19.0.0","typescript":"^5.7.3"}}
+{
+  "name": "compassion-doula",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "cms:setup": "node scripts/setup-cms.mjs",
+    "cms:dev": "node backend/server.js",
+    "cms:account": "node scripts/editor-account.cjs",
+    "dev:all": "node scripts/dev-all.mjs",
+    "test:cms": "node scripts/cms-smoke.mjs"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "next": "^16.3.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.7.3"
+  }
+}

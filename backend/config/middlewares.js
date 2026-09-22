@@ -1,0 +1,1 @@
+module.exports = ['strapi::logger','strapi::errors','strapi::security',{name:'strapi::cors',config:{origin:['http://localhost:3000','http://127.0.0.1:3000']}},'strapi::poweredBy','strapi::query',{name:'strapi::body',config:{jsonLimit:'2mb',formidable:{maxFileSize:8*1024*1024}}},'strapi::session','strapi::favicon','strapi::public'];

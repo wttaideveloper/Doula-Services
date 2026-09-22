@@ -1,0 +1,1 @@
+{"kind":"collectionType","collectionName":"inquiries","info":{"singularName":"inquiry","pluralName":"inquiries","displayName":"Contact inquiries"},"options":{"draftAndPublish":false},"attributes":{"name":{"type":"string"},"email":{"type":"email"},"dueDate":{"type":"string"},"service":{"type":"string"},"message":{"type":"text"}}}
