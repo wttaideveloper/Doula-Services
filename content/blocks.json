@@ -1,0 +1,7 @@
+{
+  "richText": {"heading":"", "body":""},
+  "image": {"image":{"src":"/generated/prenatal-care.png","alt":""}, "caption":""},
+  "gallery": {"eyebrow":"","title":"","accent":"","description":"","items":[{"image":{"src":"/generated/prenatal-care.png","alt":""},"label":"","caption":""}]},
+  "testimonials": {"eyebrow":"","items":[{"quote":"","attribution":""}]},
+  "cta": {"eyebrow":"","title":"","accent":"","description":"","button":{"label":"","href":""}}
+}

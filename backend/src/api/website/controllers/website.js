@@ -10,11 +10,15 @@ function limited(ip) {
   const value=attempts.get(ip)||{count:0,until:now+3600000};
   value.count++;attempts.set(ip,value);return value.count>5;
 }
-function output(row) {return {content:row.draft,revision:row.revision,liveRevision:row.liveRevision,publishedOn:row.publishedOn,hasUnpublishedChanges:JSON.stringify(row.draft)!==JSON.stringify(row.live)};}
+function normalize(content) {
+  if(!content||typeof content!=='object')return content;
+  return {...content,pages:Array.isArray(content.pages)?content.pages:[],brand:{...content.brand,theme:content.brand?.theme||'lavender-sage'}};
+}
+function output(row) {return {content:normalize(row.draft),revision:row.revision,liveRevision:row.liveRevision,publishedOn:row.publishedOn,hasUnpublishedChanges:JSON.stringify(row.draft)!==JSON.stringify(row.live)};}
 module.exports = {
   async live(ctx) {
     const row=await strapi.db.query(uid).findOne({});
-    ctx.set('Cache-Control','no-store');ctx.body={content:row.live,publishedOn:row.publishedOn};
+    ctx.set('Cache-Control','no-store');ctx.body={content:normalize(row.live),publishedOn:row.publishedOn};
   },
   async editor(ctx) {const row=await strapi.db.query(uid).findOne({});ctx.set('Cache-Control','no-store');ctx.body={...output(row),user:{name:ctx.state.user.username,email:ctx.state.user.email}};},
   async save(ctx) {

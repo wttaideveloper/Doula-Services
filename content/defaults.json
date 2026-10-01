@@ -8,8 +8,10 @@
     "footerLocation":"Yuba City, California",
     "footerSignature":"Created with compassion",
     "seoTitle":"Compassion Doula Services | Yuba City",
-    "seoDescription":"Warm, personalized birth doula support in Yuba City and surrounding communities. Feel informed, supported, and confident as you welcome your baby."
+    "seoDescription":"Warm, personalized birth doula support in Yuba City and surrounding communities. Feel informed, supported, and confident as you welcome your baby.",
+    "theme":"lavender-sage"
   },
+  "pages": [],
   "home": {
     "hero":{"eyebrow":"Compassion Doula Services","title":"A little guidance.\nA lot of heart.","accent":"Always by your side.","description":"Compassionate birth support to help you feel confident, cared for, and deeply connected.","button":{"label":"Let’s talk about your birth","href":"/contact"},"location":"Serving Yuba City & surrounding areas","caption":"01 — A new beginning","imageNote":"A beautiful beginning,","imageNoteAccent":"held with compassion.","slideSeconds":5,"slides":[{"image":{"src":"/generated/family-beginning-natural.png","alt":"Parents smiling as they cradle their newborn"},"label":"Your family’s new beginning"},{"image":{"src":"/generated/newborn.png","alt":"A newborn sleeping peacefully on a soft white blanket"},"label":"Your little one, finally here"}]},
     "values":["Heart-led care","Informed choices","Your voice, honored","Support for the whole you"],

@@ -1,4 +1,5 @@
 import 'server-only';
+import {cache} from 'react';
 import {cookies} from 'next/headers';
 import defaults, {type SiteContent} from '../content/types';
 
@@ -9,7 +10,7 @@ export async function cmsRequest(path:string, init:RequestInit = {}, authenticat
   if(authenticated && !token) return Response.json({error:{message:'Please sign in.'}},{status:401});
   return fetch(`${CMS_URL}/api/${path}`,{...init,cache:'no-store',signal:AbortSignal.timeout(20000),headers:{...init.headers,...(token?{Authorization:`Bearer ${token}`}:{})}});
 }
-export async function getLiveContent():Promise<SiteContent> {
+export const getLiveContent = cache(async ():Promise<SiteContent> => {
   try {
     const response=await cmsRequest('website/live');
     if(!response.ok)throw new Error('CMS unavailable');
@@ -20,4 +21,4 @@ export async function getLiveContent():Promise<SiteContent> {
     console.error('Strapi unavailable: displaying bundled website content.');
     return defaults;
   }
-}
+});
