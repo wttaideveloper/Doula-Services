@@ -12,7 +12,7 @@ function limited(ip) {
 }
 function normalize(content) {
   if(!content||typeof content!=='object')return content;
-  return {...content,pages:Array.isArray(content.pages)?content.pages:[],brand:{...content.brand,theme:content.brand?.theme||'lavender-sage'}};
+  return {...content,pages:Array.isArray(content.pages)?content.pages:[],brand:{...content.brand,theme:content.brand?.theme||'lavender'}};
 }
 function output(row) {return {content:normalize(row.draft),revision:row.revision,liveRevision:row.liveRevision,publishedOn:row.publishedOn,hasUnpublishedChanges:JSON.stringify(row.draft)!==JSON.stringify(row.live)};}
 module.exports = {
