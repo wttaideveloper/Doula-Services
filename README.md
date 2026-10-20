@@ -32,13 +32,34 @@ The contact form saves real inquiries in Strapi, visible under **Inquiries**. It
 
 ## Editor accounts
 
-To create an editor or reset an editor password, stop Strapi and run:
+The bootstrap creates the account identified by `EDITOR_EMAIL` only if it does not exist. `EDITOR_PASSWORD` is used only for that initial creation; changing it and restarting Strapi does not change an existing password.
+
+To reset an existing local website editor, stop Strapi first and run this from the repository root in an interactive terminal:
 
 ```sh
-npm run cms:account
+npm run editor:reset-password --prefix backend -- editor@example.com
 ```
 
-The command prompts for the email and a hidden password, then updates or creates the account. Restart Strapi afterward. Changing `EDITOR_PASSWORD` in the environment does not reset an existing account. The bootstrap account is created only when absent. For production use a dedicated account and remove local bootstrap credentials from the deployed environment after provisioning.
+Use the local editor's actual email for a local test. Enter the new password twice at the hidden prompts; it must be at least 14 characters. The command refuses missing users and accounts without the local provider and `site-editor` role. It changes only the password, never creates an account, and does not read the new password from the environment. Restart Strapi, sign in to `/admin` with the new password, and confirm that the old password no longer works. Avoid making content edits during verification. Previously issued sessions may remain valid until they expire; sign out existing sessions separately.
+
+For production, after deploying the code using your normal reviewed deployment procedure, stop the Strapi PM2 process, back up the SQLite database and uploads, run the same command with the production editor email, and restart Strapi. Replace `STRAPI_PROCESS` with the actual PM2 process name and `BACKUP_DIRECTORY` with a private, access-restricted location outside the repository:
+
+```sh
+cd /path/to/Doula-Services
+pm2 stop STRAPI_PROCESS
+install -d -m 700 BACKUP_DIRECTORY
+cp -p backend/.tmp/data.db BACKUP_DIRECTORY/data.db
+for suffix in -wal -shm; do
+  if [ -f "backend/.tmp/data.db$suffix" ]; then cp -p "backend/.tmp/data.db$suffix" "BACKUP_DIRECTORY/data.db$suffix"; fi
+done
+cp -a backend/public/uploads BACKUP_DIRECTORY/uploads
+npm run editor:reset-password --prefix backend -- owner@compassion.local
+pm2 start STRAPI_PROCESS
+```
+
+Use the configured database path if it differs from `backend/.tmp/data.db`, and verify the backup succeeded before resetting. Keep the backend stopped until the reset finishes, and restart it even if the command reports an error. Strapi loads its normal application lifecycle during the command, so use a deployed, configured database and take the backup first. Test locally against a disposable database, never against production data. The older `npm run cms:account` command also creates accounts and modifies account settings; do not use it for this password-only procedure.
+
+Keep production `.env` files, SQLite databases (including journal/WAL files), backups and uploads out of Git. The repository ignores `.env*`, `backend/.tmp` and uploaded media; store backups outside the repository, and check `git status` and `git check-ignore` before committing. Never commit credentials or database copies.
 
 ## Data and architecture
 
@@ -55,6 +76,7 @@ Back up the database and uploads together while Strapi is stopped. Preserve envi
 ## Verify
 
 ```sh
+npm run test:editor-reset --prefix backend
 npm run typecheck
 npm run build
 # With both servers running:

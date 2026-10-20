@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "scripts": {
     "develop": "node server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "editor:reset-password": "node scripts/reset-editor-password.cjs",
+    "test:editor-reset": "node --test test/reset-editor-password.test.cjs"
   },
   "dependencies": {
     "@strapi/plugin-users-permissions": "5.58.0",
